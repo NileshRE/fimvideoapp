@@ -35,7 +35,7 @@ const Header = () => {
         <button className={`px-3 py-2 rounded-r-full ${mode ? "bg-gray-200" : "bg-transparent"}`}><IoSearch size={20} color='grey'/></button>
         </div>
         <div className="col-span-1 flex justify-evenly">
-        <button className="text-sm p-2 border rounded-full flex text-gray-500" onClick={()=>toggleMode()}>Change Mode {mode ? <RiMoonClearLine size={20} color="grey" />  : <LuSunMoon size={20} color="grey" /> } </button>
+        <button className="text-sm p-2 border rounded-full flex text-gray-400" onClick={()=>toggleMode()}>Change Mode {mode ? <RiMoonClearLine size={20} color="grey" />  : <LuSunMoon size={20} color="grey" /> } </button>
         <FaUserCircle size={32} />
         </div>
     </div>

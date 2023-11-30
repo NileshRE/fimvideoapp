@@ -2,13 +2,17 @@ import React from "react";
 import millify from "millify";
 import TimeAgo from 'javascript-time-ago'
 import en from 'javascript-time-ago/locale/en'
+import { useSelector } from "react-redux";
+
+
 
 TimeAgo.addDefaultLocale(en)
 const timeAgo = new TimeAgo('en-US')
 
 const VideoCard = ({ info }) => {
+  const mode = useSelector(store=>store.app.isDarkMode)
   return (
-    <div className="mx-6 my-4 shadow-md rounded-b-md">
+    <div className={`mx-6 my-4 rounded-b-md shadow-md ${mode && "hover:border-b border-gray-500"}`}>
         <div className="my-3">
             <img src={info?.snippet?.thumbnails.medium.url} alt="thumbnail" className="rounded-md" />
         </div>
