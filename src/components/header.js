@@ -24,7 +24,7 @@ const Header = () => {
     }
   },200);
 
-    getSearchVideos();
+    // getSearchVideos();
    return () =>{
     clearTimeout(timer);
    }
@@ -37,11 +37,11 @@ const Header = () => {
     dispatch(cacheData({[searchQuery]:response[1]}))
   }
 
-  const getSearchVideos = async(searchQuery)=>{
-    const videodata = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${searchQuery}&regionCode=IN&type=video&key=${API_KEY}`)
-    const response = await videodata.json();
-    console.log(response);
-  }
+  // const getSearchVideos = async(searchQuery)=>{
+  //   const videodata = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${searchQuery}&regionCode=IN&type=video&key=${API_KEY}`)
+  //   const response = await videodata.json();
+  //   console.log(response);
+  // }
 
   const toggleMenuHeader = ()=>{
       dispatch(toggleMenu())
@@ -74,7 +74,7 @@ const Header = () => {
         <div className="absolute top-8 right-[31%] w-5/12 rounded-md mt-1 shadow-md" id="list">
           <ul>
             {suggestion?.map(item=>
-            <li key={item} className="py-1 px-2 flex items-center hover:border" onClick={()=>getSearchVideos(item)}><IoSearch size={16} color='grey' /><span className='ml-4'>{item}</span></li>)}
+            <li key={item} className="py-1 px-2 flex items-center hover:border"><IoSearch size={16} color='grey' /><span className='ml-4'>{item}</span></li>)}
           </ul>
         </div>
         </div>
