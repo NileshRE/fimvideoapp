@@ -5,8 +5,7 @@ import en from 'javascript-time-ago/locale/en'
 import { useSelector } from "react-redux";
 
 
-
-TimeAgo.addDefaultLocale(en)
+TimeAgo.addLocale(en)
 const timeAgo = new TimeAgo('en-US')
 
 const VideoCard = ({ info }) => {
