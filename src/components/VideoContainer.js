@@ -16,13 +16,13 @@ const VideoContainer = () => {
   },[])
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap mx-[30px] gap-3">
       {videos?.map(video=>(
-        <div key={video.id} className="w-3/12">
-      <Link to={"/watch/?v=" + video.id}>
-        <VideoCard info={video} />
-      </Link>
-      </div>
+        <div key={video.id} className="w-fit">
+          <Link to={"/watch/?v=" + video.id}>
+            <VideoCard info={video} />
+          </Link>
+        </div>
       ))}
     </div>
   )

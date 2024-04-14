@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const navSlice = createSlice({
     name:"app",
     initialState:{
-        isMenuOpen: true,
+        isMenuOpen: false,
         isDarkMode: true,
     },
     reducers:{

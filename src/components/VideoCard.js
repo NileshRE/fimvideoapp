@@ -11,9 +11,9 @@ const timeAgo = new TimeAgo('en-US')
 const VideoCard = ({ info }) => {
   const mode = useSelector(store=>store.app.isDarkMode)
   return (
-    <div className={`mx-6 my-4 rounded-b-md shadow-md ${mode && "hover:border-b border-gray-500"}`}>
+    <div className={`rounded-b-md shadow-md md:w-[340px] max-[640px]:w-[340px] ${mode && "hover:scale-95"}`}>
         <div className="my-3">
-            <img src={info?.snippet?.thumbnails.medium.url} alt="thumbnail" className="rounded-md" />
+            <img src={info?.snippet?.thumbnails.medium.url} alt="thumbnail" className="rounded-md mx-auto" />
         </div>
         <div className="px-3 pb-2">
         <p className="text-sm font-semibold pb-1">{info?.snippet?.title}</p>

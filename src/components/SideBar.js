@@ -6,7 +6,7 @@ const SideBar = () => {
   const navMenu = useSelector(store=>store.app.isMenuOpen);
   if(!navMenu) return null;
   return (
-    <div className="px-3 py-4 w-2/12">
+    <div className="px-3 py-4 lg:bg-inherit lg:w-2/12 md:bg-slate-100 sm:bg-slate-100 lg:static md:absolute md:w-4/12 sm:absolute sm:w-4/12 max-[640px]:bg-slate-100 max-[640px]:absolute">
       <h1 className="font-semibold pt-3 pb-1 px-2 rounded-md hover:shadow-md hover:border"><Link to="/">Home</Link></h1>
       <hr className="border-gray-400"/>
       <h1 className="font-semibold pt-3 pb-1 px-2">Explore</h1>
