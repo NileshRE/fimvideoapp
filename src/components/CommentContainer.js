@@ -48,16 +48,6 @@ const CommentsData = [
     name:"Nilesh",
     comment: "Lorem ipsum sit amet dolor",
     replies:[]
-  },
-  {
-    name:"Nilesh",
-    comment: "Lorem ipsum sit amet dolor",
-    replies:[]
-  },
-  {
-    name:"Nilesh",
-    comment: "Lorem ipsum sit amet dolor",
-    replies:[]
   }
 ]
 

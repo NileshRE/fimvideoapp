@@ -12,10 +12,10 @@ const WatchPage = () => {
         dispatch(closeMenu());
     },[])
   return (
-  <div className='m-5'>
+  <div className='m-auto'>
     <div className='lg:flex lg:flex-row md:flex md:flex-col'>
-      <div className='mr-6 w-full max-[640px]:aspect-video sm:aspect-video md:aspect-video'>
-        <iframe width="1024" height="600" src={"https://www.youtube.com/embed/"+searchParams.get("v")}
+      <div className='videowrapper'>
+        <iframe width="1024" height="800" src={"https://www.youtube.com/embed/"+searchParams.get("v")}
         title="YouTube video player" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         allowFullScreen></iframe>
